@@ -661,6 +661,16 @@ h1,h2,h3,h4,h5 {
           width: 600px;
         }
       }
+      h4 {
+        font-size: 19px;
+        color: #FFF;
+        font-weight: 600;
+        line-height: 120%;
+        @include breakpoint(phone) {
+          font-size: 19px;
+          width: 600px;
+        }
+      }
       .btn-shop {
         display: flex;
         color: #FFF;

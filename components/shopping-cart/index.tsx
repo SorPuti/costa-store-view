@@ -4,11 +4,11 @@ import Item from './item';
 import { RootState } from 'store';
 
 const ShoppingCart = () => {
-  const { cartItems } = useSelector((state: RootState)  => state.cart);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
 
   const priceTotal = () => {
     let totalPrice = 0;
-    if(cartItems.length > 0) {
+    if (cartItems.length > 0) {
       cartItems.map(item => totalPrice += item.price * item.count);
     }
 
@@ -19,7 +19,7 @@ const ShoppingCart = () => {
     <section className="cart">
       <div className="container">
         <div className="cart__intro">
-          <h3 className="cart__title">Shopping Cart</h3>
+          <h3 className="cart__title">Carrinho de compras</h3>
           <CheckoutStatus step="cart" />
         </div>
 
@@ -28,16 +28,16 @@ const ShoppingCart = () => {
             <table>
               <tbody>
                 <tr>
-                  <th style={{textAlign: 'left'}}>Product</th>
-                  <th>Color</th>
-                  <th>Size</th>
-                  <th>Ammount</th>
-                  <th>Price</th>
+                  <th style={{ textAlign: 'left' }}>Produtos</th>
+                  <th>Cor</th>
+                  <th>Tamanho</th>
+                  <th>Quantia</th>
+                  <th>Preço</th>
                   <th></th>
                 </tr>
 
                 {cartItems.map(item => (
-                  <Item 
+                  <Item
                     key={item.id}
                     id={item.id}
                     thumb={item.thumb}
@@ -49,21 +49,22 @@ const ShoppingCart = () => {
                   />
                 ))}
               </tbody>
-            </table> 
-          } 
-          
-          {cartItems.length === 0 && 
-            <p>Nothing in the cart</p>
+            </table>
+          }
+
+          {cartItems.length === 0 &&
+            <p>Nada no carrinho</p>
           }
         </div>
-      
+
         <div className="cart-actions">
-          <a href="/products" className="cart__btn-back"><i className="icon-left"></i> Continue Shopping</a>
+          <a href="/products" className="cart__btn-back"><i className="icon-left"></i> Continue comprando</a>
           <input type="text" placeholder="Promo Code" className="cart__promo-code" />
 
           <div className="cart-actions__items-wrapper">
-            <p className="cart-actions__total">Total cost <strong>${priceTotal().toFixed(2)}</strong></p>
-            <a href="/cart/checkout" className="btn btn--rounded btn--yellow">Checkout</a>
+            <p className="cart-actions__total">Custo total <strong>${priceTotal().toFixed(2)}</strong></p>
+            {/* <a href="/cart/checkout" className="btn btn--rounded btn--yellow">Pagar</a> */}
+            <a className="btn btn--rounded btn--yellow">Pagar</a>
           </div>
         </div>
       </div>
@@ -71,5 +72,5 @@ const ShoppingCart = () => {
   )
 };
 
-  
+
 export default ShoppingCart

@@ -25,13 +25,13 @@ const ForgotPassword = () => {
         <div className="container">
           <div className="back-button-section">
             <Link href="/products">
-              <a><i className="icon-left"></i> Back to shop</a>
+              <a><i className="icon-left"></i>Voltar para a loja</a>
             </Link>
           </div>
 
           <div className="form-block">
-            <h2 className="form-block__title">Forgot your password?</h2>
-            <p className="form-block__description">Enter your email or phone number and recover your account</p>
+            <h2 className="form-block__title">Esqueceu sua senha?</h2>
+            <p className="form-block__description">Digite seu e-mail ou número de telefone e recupere sua conta</p>
             
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="form__input-row">
@@ -47,11 +47,11 @@ const ForgotPassword = () => {
                 />
 
                 {errors.email && errors.email.type === 'required' && 
-                  <p className="message message--error">This field is required</p>
+                  <p className="message message--error">Este campo é obrigatório</p>
                 }
 
                 {errors.email && errors.email.type === 'pattern' && 
-                  <p className="message message--error">Please write a valid email</p>
+                  <p className="message message--error">por favor escreva um e-mail válido</p>
                 }
               </div>
               
@@ -64,11 +64,11 @@ const ForgotPassword = () => {
                   ref={register({ required: true })}
                 />
                 {errors.password && errors.password.type === 'required' && 
-                  <p className="message message--error">This field is required</p>
+                  <p className="message message--error">Este campo é obrigatório</p>
                 }
               </div>
 
-              <button type="submit" className="btn btn--rounded btn--yellow btn-submit">Reset password</button>
+              <button type="submit" className="btn btn--rounded btn--yellow btn-submit">Redefinir senha</button>
             </form>
           </div>
 

@@ -7,14 +7,14 @@ type LayoutType = {
   children?: React.ReactNode;
 }
 
-export default ({ children, title = 'Next.js Ecommerce' }: LayoutType) => {
+export default ({ children, title = 'Costa Store' }: LayoutType) => {
   const router = useRouter();
   const pathname = router.pathname;
 
   return (
     <div className="app-main">
       <Head>
-        <title>Page not found &mdash; { title }</title>
+        <title>Página não foi encontrada! &mdash; { title }</title>
       </Head>
 
       <Header isErrorPage />

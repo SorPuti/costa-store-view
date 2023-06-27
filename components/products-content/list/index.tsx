@@ -4,8 +4,8 @@ import ProductsLoading from './loading';
 import { ProductTypeList } from 'types';
 
 const ProductsContent = () => {
-  const fetcher = (url: string) => fetch(url).then((res) => res.json());
-  const { data, error } = useSwr('/api/products', fetcher);
+  const fetcher = (url: string) => fetch(url).then((res) => res.json()).then(json => json.data);
+  const { data, error } = useSwr('/api/product/products', fetcher);
 
   if (error) return <div>Failed to load users</div>;
   return (

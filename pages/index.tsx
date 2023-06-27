@@ -2,7 +2,6 @@ import Layout from '../layouts/Main';
 import PageIntro from '../components/page-intro';
 import ProductsFeatured from '../components/products-featured';
 import Footer from '../components/footer';
-import Subscribe from '../components/subscribe';
 
 const IndexPage = () => {
   return (
@@ -10,67 +9,55 @@ const IndexPage = () => {
       <PageIntro />
 
       <section className="featured">
-        <div className="container">
-          <article style={{backgroundImage: 'url(/images/featured-1.jpg)'}} className="featured-item featured-item-large">
+        <div className="container" style={{ textAlign: 'center' }}>
+          <article style={{ backgroundImage: 'url(/images/featured-1.jpg)' }} className="featured-item featured-item-large">
             <div className="featured-item__content">
-              <h3>New arrivals are now in!</h3>
-              <a href="#" className="btn btn--rounded">Show Collection</a>
+              <h3>Novidades já estão chegando!</h3>
+              <a href="#" className="btn btn--rounded">Mostrar coleção</a>
             </div>
           </article>
-          
-          <article style={{backgroundImage: 'url(/images/featured-2.jpg)'}} className="featured-item featured-item-small-first">
-            <div className="featured-item__content">
-              <h3>Basic t-shirts $29,99</h3>
-              <a href="#" className="btn btn--rounded">More details</a>
-            </div>
-          </article>
-          
-          <article style={{backgroundImage: 'url(/images/featured-3.jpg)'}} className="featured-item featured-item-small">
-            <div className="featured-item__content">
-              <h3>Sale this summer</h3>
-              <a href="#" className="btn btn--rounded">VIEW ALL</a>
-            </div>
-          </article>
+
+
         </div>
       </section>
 
       <section className="section">
         <div className="container">
           <header className="section__intro">
-            <h4>Why should you choose us?</h4>
+            <h4>Por que você deve escolher-nos?</h4>
           </header>
 
           <ul className="shop-data-items">
             <li>
               <i className="icon-shipping"></i>
               <div className="data-item__content">
-                <h4>Free Shipping</h4>
-                <p>All purchases over $199 are eligible for free shipping via USPS First Class Mail.</p>
+                <h4>Entregas rápidas</h4>
+                <p>Em estação de trem metrô e via sedex para todo o brasil.</p>
               </div>
             </li>
-            
+
             <li>
               <i className="icon-payment"></i>
               <div className="data-item__content">
-                <h4>Easy Payments</h4>
-                <p>All payments are processed instantly over a secure payment protocol.</p>
+                <h4>Pagamentos facilitados</h4>
+                <p>Todos os pagamentos são processados instantaneamente através de um protocolo de pagamento seguro.</p>
               </div>
             </li>
-            
+
             <li>
               <i className="icon-cash"></i>
               <div className="data-item__content">
-                <h4>Money-Back Guarantee</h4>
-                <p>If an item arrived damaged or you've changed your mind, you can send it
-                back for a full refund.</p>
+                <h4>Garantia de devolução de dinheiro</h4>
+                <p>Se um item chegou danificado ou você mudou de ideia, você pode enviá-lo
+                  de volta para um reembolso total.</p>
               </div>
             </li>
-            
+
             <li>
               <i className="icon-materials"></i>
               <div className="data-item__content">
-                <h4>Finest Quality</h4>
-                <p>Designed to last, each of our products has been crafted with the finest materials.</p>
+                <h4>Melhor qualidade</h4>
+                <p>Projetado para durar, cada um de nossos produtos foi fabricado com os melhores materiais.</p>
               </div>
             </li>
           </ul>
@@ -78,7 +65,6 @@ const IndexPage = () => {
       </section>
 
       <ProductsFeatured />
-      <Subscribe />
       <Footer />
     </Layout>
   )

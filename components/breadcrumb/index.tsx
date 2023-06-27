@@ -3,7 +3,7 @@ const Breadcrumb = () => (
     <div className="container">
       <ul className="breadcrumb-list">
         <li><a href="#"><i className="icon-home"></i></a></li>
-        <li>All Products</li>
+        <li>Todos os Produtos</li>
       </ul>
     </div>
   </section>
