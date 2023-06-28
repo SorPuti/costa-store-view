@@ -47,9 +47,8 @@ const IndexPage = () => {
             <li>
               <i className="icon-cash"></i>
               <div className="data-item__content">
-                <h4>Garantia de devolução de dinheiro</h4>
-                <p>Se um item chegou danificado ou você mudou de ideia, você pode enviá-lo
-                  de volta para um reembolso total.</p>
+                <h4>Garantia de originalidade</h4>
+                <p>Produtos 100% originais, efetuar todas as dúvidas no ato do pedido</p>
               </div>
             </li>
 

@@ -1,7 +1,4 @@
 import mongoose from "mongoose";
-// eslint-ignore
-import Categories from "./Category";
-
 
 
 const ProductSchema = new mongoose.Schema({
